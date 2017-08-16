@@ -40,11 +40,6 @@ function showSection() {
             $(sectionID).removeClass("screen");
             $("html, body").animate({ scrollTop: $(sectionID).offset().top }, speed1);
             
-            $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
-            //$("#navHeader").css("display", "block"); 
-            $(sectionID).css("position", "relative");
-            adress = $(this).attr('id');
-            $(".content"+adress).css('background',  '#1B1B1C');
              $(sectionID).animate({height: wHeight}, speed1); 
 }
 
