@@ -4,7 +4,7 @@
 
 var wHeight = $(window).height();
 var wWidth = $(window).width();
-
+if(wWidth > 500) {
 var speed1 = 500,
     speed2 = 600,
     speed3 = 520,
@@ -12,8 +12,16 @@ var speed1 = 500,
     speed5 = 300,
     speed6 = 650, 
     speed7 = 800;
-
-
+}
+else {
+    speed1 = 1500,
+    speed2 = 1600,
+    speed3 = 1700,
+    speed4 = 1200,
+    speed5 = 800,
+    speed6 = 1800, 
+    speed7 = 800;
+}
 $(".section").hover(function() {
     $(this).css("background-color", "rgba(0,0,0,0.4)");
 }, function() {
