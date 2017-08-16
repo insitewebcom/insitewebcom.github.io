@@ -108,7 +108,7 @@ p
 
     transition: padding 300ms ease;
 
-    border: 1.5px solid #fff;
+    border: none;
     border-radius: 50%;
     background-image: url(../img/button_head.png);
     background-repeat: no-repeat;
@@ -138,8 +138,8 @@ p
 .downButton:hover
 {
     padding: 15px;
-
-    transition: padding 300ms ease;
+border: 1.5px solid #fff;
+    transition: border padding 300ms ease;
 }
 
 .section

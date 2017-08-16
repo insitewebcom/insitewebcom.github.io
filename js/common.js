@@ -5,14 +5,7 @@
 var wHeight = $(window).height();
 var wWidth = $(window).width();
 
-$(document).ready(function() {
- 
-   
-    
-   
-  
-   
-});
+
 
 $(".section").hover(function() {
     $(this).css("background-color", "rgba(0,0,0,0.4)");
@@ -24,14 +17,14 @@ $(".section").hover(function() {
 
 $(".headButton").click(function(ev) {
     ev.preventDefault();
-    $("html, body").animate({scrollTop: $("#secondScreen").offset().top}, 500);
+    $("html, body").animate({scrollTop: $("#secondScreen").offset().top}, 600);
 });
 var adress = 0;
 var sectionID = 0;
 function showSection() {
             $(sectionID).removeClass("screen");
-            $("html, body").animate({ scrollTop: $(sectionID).offset().top }, 500);
-            $(sectionID).animate({height: "100vh"}, 500); 
+            $("html, body").animate({ scrollTop: $(sectionID).offset().top }, 600);
+            $(sectionID).animate({height: "100vh"}, 600); 
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
             //$("#navHeader").css("display", "block"); 
           
@@ -40,29 +33,29 @@ function showSection() {
              setTimeout(function() {
             if(id == "#thirdScreen") {
           $(".downButton").css("display", "block"); }
-            }, 600);
+            }, 700);
             setTimeout(function() {
                 $(".navUl").height(200);
                  $(".content"+adress).css('display', 'flex');
-            },600);
+            },700);
             setTimeout(function() {
                 $(".firstScreen").css("display", "none"); 
                 $(".screen").css("display", "none"); 
                 if (navigator.userAgent.search("Firefox") >= 0)  {             
                     $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
                 }
-            }, 520);
+            }, 620);
 }
 
 function hideSection() {
                 $(sectionID).addClass('screen');
-                $("html, body").animate({ scrollTop:$(sectionID).offset().top}, 400, function() {
+                $("html, body").animate({ scrollTop:$(sectionID).offset().top}, 500, function() {
                 $(".firstScreen").css("display", "flex");
                 $(".screen").css("display", "flex");
                 $('.content').css("display", "none");
                 $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
-                $(sectionID).animate({height: wHeight*0.5}, 300);
-                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, 300);
+                $(sectionID).animate({height: wHeight*0.5}, 400);
+                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, 400);
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
                 $("#navHeader").css("display", "none");
                  $(".downButton").css("display", "none"); 
@@ -85,7 +78,7 @@ $(".section").click($.debounce(250, function() {
 $("a.footerSection").click(function() {
     var linkID = $(this).attr("href");
     if (linkID == id) {
-        $('html, body').animate({ scrollTop: $(id).offset().top  },500); 
+        $('html, body').animate({ scrollTop: $(id).offset().top  },600); 
     } else {
         if ($(sectionID).height() == wHeight) {
             hideSection();
@@ -93,13 +86,13 @@ $("a.footerSection").click(function() {
             sectionID = linkID;
             id = linkID;
             $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 500); 
-            setTimeout(function() { showSection(); }, 650);
-            }, 600);
+            setTimeout(function() { showSection(); }, 750);
+            }, 700);
         } else {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 500); 
-            setTimeout(function() { showSection(); }, 650);
+            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 600); 
+            setTimeout(function() { showSection(); }, 750);
           }       
       }
 });
@@ -108,7 +101,7 @@ $("a.navSection").click(function() {
    var linkID = $(this).attr("href");
     if (linkID == id) {
         if (($(id).offset().top - $(window).scrollTop()) != 0) {
-            $('html, body').animate({ scrollTop: $(id).offset().top  },500); 
+            $('html, body').animate({ scrollTop: $(id).offset().top  },600); 
         } 
     }
     else  {
@@ -116,9 +109,9 @@ $("a.navSection").click(function() {
         setTimeout(function() {
         sectionID = linkID;
         id = linkID;
-        $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 600); 
-        setTimeout(function() { showSection(); }, 800);
-        }, 650);
+        $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 700); 
+        setTimeout(function() { showSection(); }, 900);
+        }, 750);
     } 
 });
 
