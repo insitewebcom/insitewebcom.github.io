@@ -19,7 +19,7 @@ else {
     speed3 = 1700,
     speed4 = 1200,
     speed5 = 800,
-    speed6 = 1800, 
+    speed6 = 2000, 
     speed7 = 800;
 }
 $(".section").hover(function() {
