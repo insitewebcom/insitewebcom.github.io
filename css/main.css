@@ -618,7 +618,7 @@ input[type="text"] {
         outline: none;
 -webkit-tap-highlight-color: rgba(0,0,0,0);
 -webkit-tap-highlight-color: transparent;
-        background-size: cover;
+        background-size: center;
     }
     .downButton
     {
