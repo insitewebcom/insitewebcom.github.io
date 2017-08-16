@@ -42,7 +42,7 @@ function showSection() {
             if (wWidth > 500) {
             $(sectionID).animate({height: wHeight}, speed1); }
             else {
-                            $(sectionID).animate({height: wHeight*0.8}, speed1); }
+                            $(sectionID).animate({height: wHeight*0.9}, speed1); }
 
             
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
@@ -86,7 +86,7 @@ function hideSection() {
 var id = 0;
 
 $(".section").click($.debounce(250, function() {
-        if ($(this).height() >= wHeight*0.5) && ($(this).height() < wHeight*0.8) { 
+        if (($(this).height() >= wHeight*0.5) && ($(this).height() < wHeight*0.8)) { 
             sectionID = this;
             id = '#' + $(this).attr('id');
             showSection();
