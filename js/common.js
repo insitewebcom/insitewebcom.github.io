@@ -39,8 +39,27 @@ var sectionID = 0;
 function showSection() {
             $(sectionID).removeClass("screen");
             $("html, body").animate({ scrollTop: $(sectionID).offset().top }, speed1);
+            $(sectionID).animate({height: wHeight}, speed1); 
+            $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
+            //$("#navHeader").css("display", "block"); 
             
-             $(sectionID).animate({height: wHeight}, speed1); 
+            adress = $(this).attr('id');
+            $(".content"+adress).css('background',  '#1B1B1C');
+             setTimeout(function() {
+            if(id == "#thirdScreen") {
+          $(".downButton").css("display", "block"); }
+            }, speed2);
+            setTimeout(function() {
+                $(".navUl").height(200);
+                 $(".content"+adress).css('display', 'flex');
+            },speed2);
+            setTimeout(function() {
+                $(".firstScreen").css("display", "none"); 
+                $(".screen").css("display", "none"); 
+                if (navigator.userAgent.search("Firefox") >= 0)  {             
+                    $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
+                }
+            }, speed3);
 }
 
 function hideSection() {
@@ -50,7 +69,7 @@ function hideSection() {
                 $(".screen").css("display", "flex");
                 $('.content').css("display", "none");
                 $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
-                $(sectionID).animate({height: "50vh"}, speed5);
+                $(sectionID).animate({height: wHeight*0.5}, speed5);
                 $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5);
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
                 $("#navHeader").css("display", "none");
