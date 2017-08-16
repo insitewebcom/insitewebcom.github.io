@@ -39,7 +39,7 @@ var sectionID = 0;
 function showSection() {
             $(sectionID).removeClass("screen");
             $("html, body").animate({ scrollTop: $(sectionID).offset().top }, speed1);
-            $(sectionID).animate({height: "100vh"}, speed1); 
+            $(sectionID).animate({height: wHeight}, speed1); 
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
             //$("#navHeader").css("display", "block"); 
             $(sectionID).css("position", "relative");
