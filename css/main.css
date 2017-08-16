@@ -523,6 +523,22 @@ input[type="text"] {
 @media only screen and (max-width: 500px)
 {
 
+    .firstScreen {
+        background-image: url(img/insiteSmall.jpg);
+    }
+    #secondScreen {
+        background-image: url(img/stormSmall.jpg);
+    }
+    #thirdScreen {
+        background-image: url(img/worksSmall.jpg);
+    }
+    #fourthScreen {
+        background-image: url(img/teamSmall.jpg);
+    }
+    #fifthScreen {
+        background-image: url(img/contactSmall.jpg);
+    }
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-focus-ring-color: rgba(0,0,0,0);
