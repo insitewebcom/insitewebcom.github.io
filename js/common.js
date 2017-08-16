@@ -42,7 +42,7 @@ function showSection() {
             if (wWidth > 500) {
             $(sectionID).animate({height: wHeight}, speed1); }
             else {
-                            $(sectionID).animate({height: wHeight*0.7}, speed1); }
+                            $(sectionID).animate({height: wHeight*0.8}, speed1); }
 
             }
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
