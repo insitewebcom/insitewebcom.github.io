@@ -78,8 +78,9 @@ function hideSection() {
 
 }
 var id = 0;
+
 $(".section").click($.debounce(250, function() {
-        if ($(this).height() == wHeight*0.5) { 
+        if ($(this).height() <= wHeight*0.5) { 
             sectionID = this;
             id = '#' + $(this).attr('id');
             showSection();
@@ -89,6 +90,7 @@ $(".section").click($.debounce(250, function() {
             hideSection(); 
           }
 }));
+
 
 $("a.footerSection").click(function() {
     var linkID = $(this).attr("href");
