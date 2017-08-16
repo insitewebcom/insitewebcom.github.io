@@ -74,6 +74,7 @@ function hideSection() {
                 $(".screen").css("display", "flex");
                 $('.content').css("display", "none");
                 $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
+                
                 $(sectionID).animate({height: wHeight*0.5}, speed5);
                 $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5);
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
@@ -85,7 +86,7 @@ function hideSection() {
 var id = 0;
 
 $(".section").click($.debounce(250, function() {
-        if ($(this).height() >= wHeight*0.5) { 
+        if ($(this).height() >= wHeight*0.5 && $(this).height() <= wHeight*0.9) { 
             sectionID = this;
             id = '#' + $(this).attr('id');
             showSection();
