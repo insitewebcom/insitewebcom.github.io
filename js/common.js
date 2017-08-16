@@ -4,9 +4,24 @@
 
 var wHeight = $(window).height();
 var wWidth = $(window).width();
-
-
-
+if(wWidth > 500) {
+var speed1 = 500,
+    speed2 = 600,
+    speed3 = 520,
+    speed4 = 400,
+    speed5 = 300,
+    speed6 = 650, 
+    speed7 = 800;
+}
+else {
+    speed1 = 1500,
+    speed2 = 1600,
+    speed3 = 1700,
+    speed4 = 1200,
+    speed5 = 800,
+    speed6 = 1800, 
+    speed7 = 800;
+}
 $(".section").hover(function() {
     $(this).css("background-color", "rgba(0,0,0,0.4)");
 }, function() {
@@ -17,14 +32,14 @@ $(".section").hover(function() {
 
 $(".headButton").click(function(ev) {
     ev.preventDefault();
-    $("html, body").animate({scrollTop: $("#secondScreen").offset().top}, 600);
+    $("html, body").animate({scrollTop: $("#secondScreen").offset().top}, speed1);
 });
 var adress = 0;
 var sectionID = 0;
 function showSection() {
             $(sectionID).removeClass("screen");
-            $("html, body").animate({ scrollTop: $(sectionID).offset().top }, 600);
-            $(sectionID).animate({height: "100vh"}, 600); 
+            $("html, body").animate({ scrollTop: $(sectionID).offset().top }, speed1);
+            $(sectionID).animate({height: "100vh"}, speed1); 
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
             //$("#navHeader").css("display", "block"); 
           
@@ -33,29 +48,29 @@ function showSection() {
              setTimeout(function() {
             if(id == "#thirdScreen") {
           $(".downButton").css("display", "block"); }
-            }, 700);
+            }, speed2);
             setTimeout(function() {
                 $(".navUl").height(200);
                  $(".content"+adress).css('display', 'flex');
-            },700);
+            },speed2);
             setTimeout(function() {
                 $(".firstScreen").css("display", "none"); 
                 $(".screen").css("display", "none"); 
                 if (navigator.userAgent.search("Firefox") >= 0)  {             
                     $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
                 }
-            }, 620);
+            }, speed3);
 }
 
 function hideSection() {
                 $(sectionID).addClass('screen');
-                $("html, body").animate({ scrollTop:$(sectionID).offset().top}, 500, function() {
+                $("html, body").animate({ scrollTop:$(sectionID).offset().top}, speed4, function() {
                 $(".firstScreen").css("display", "flex");
                 $(".screen").css("display", "flex");
                 $('.content').css("display", "none");
                 $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
-                $(sectionID).animate({height: wHeight*0.5}, 400);
-                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, 400);
+                $(sectionID).animate({height: wHeight*0.5}, speed5);
+                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5);
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
                 $("#navHeader").css("display", "none");
                  $(".downButton").css("display", "none"); 
@@ -78,21 +93,21 @@ $(".section").click($.debounce(250, function() {
 $("a.footerSection").click(function() {
     var linkID = $(this).attr("href");
     if (linkID == id) {
-        $('html, body').animate({ scrollTop: $(id).offset().top  },600); 
+        $('html, body').animate({ scrollTop: $(id).offset().top  },speed1); 
     } else {
         if ($(sectionID).height() == wHeight) {
             hideSection();
             setTimeout(function() {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 500); 
-            setTimeout(function() { showSection(); }, 750);
-            }, 700);
+            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, speed1); 
+            setTimeout(function() { showSection(); }, speed6);
+            }, speed2);
         } else {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 600); 
-            setTimeout(function() { showSection(); }, 750);
+            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, speed1); 
+            setTimeout(function() { showSection(); }, speed6);
           }       
       }
 });
@@ -101,7 +116,7 @@ $("a.navSection").click(function() {
    var linkID = $(this).attr("href");
     if (linkID == id) {
         if (($(id).offset().top - $(window).scrollTop()) != 0) {
-            $('html, body').animate({ scrollTop: $(id).offset().top  },600); 
+            $('html, body').animate({ scrollTop: $(id).offset().top  },speed1); 
         } 
     }
     else  {
@@ -109,9 +124,9 @@ $("a.navSection").click(function() {
         setTimeout(function() {
         sectionID = linkID;
         id = linkID;
-        $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, 700); 
-        setTimeout(function() { showSection(); }, 900);
-        }, 750);
+        $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, speed2); 
+        setTimeout(function() { showSection(); }, speed7);
+        }, speed6);
     } 
 });
 
