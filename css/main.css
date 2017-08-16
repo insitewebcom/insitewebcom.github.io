@@ -524,19 +524,19 @@ input[type="text"] {
 {
 
     .firstScreen {
-        background-image: url(img/insiteSmall.jpg);
+        background-image: url(..img/insiteSmall.jpg);
     }
     #secondScreen {
-        background-image: url(img/stormSmall.jpg);
+        background-image: url(..img/stormSmall.jpg);
     }
     #thirdScreen {
-        background-image: url(img/worksSmall.jpg);
+        background-image: url(..img/worksSmall.jpg);
     }
     #fourthScreen {
-        background-image: url(img/teamSmall.jpg);
+        background-image: url(..img/teamSmall.jpg);
     }
     #fifthScreen {
-        background-image: url(img/contactSmall.jpg);
+        background-image: url(..img/contactSmall.jpg);
     }
 
 * {
