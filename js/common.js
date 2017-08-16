@@ -86,7 +86,7 @@ function hideSection() {
 var id = 0;
 
 $(".section").click($.debounce(250, function() {
-        if ($(this).height() >= wHeight*0.5 && $(this).height() <= wHeight*0.9) { 
+        if ($(this).height() >= wHeight*0.5) && ($(this).height() < wHeight*0.8) { 
             sectionID = this;
             id = '#' + $(this).attr('id');
             showSection();
