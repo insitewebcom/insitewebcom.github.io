@@ -44,7 +44,7 @@ function showSection() {
             else {
                             $(sectionID).animate({height: wHeight*0.8}, speed1); }
 
-            }
+            
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
             //$("#navHeader").css("display", "block"); 
             
