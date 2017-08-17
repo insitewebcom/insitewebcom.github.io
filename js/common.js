@@ -14,12 +14,12 @@ var speed1 = 500,
     speed7 = 800;
 }
 else {
-    speed1 = 750,
-    speed2 = 1000,
-    speed3 = 780,
-    speed4 = 600,
+    speed1 = 1200,
+    speed2 = 1300,
+    speed3 = 1250,
+    speed4 = 1100,
     speed5 = 500,
-    speed6 = 975, 
+    speed6 = 1800, 
     speed7 = 800;
 }
 $(".section").hover(function() {
@@ -196,7 +196,7 @@ $(".downButton").click(function() {
 
 $(".workExapmle").click($.debounce(100,(function() {
     
-    $('html, body').animate({ scrollTop: $(this).next('.workExapmle').offset().top  },500);
+    $('html, body').animate({ scrollTop: $(this).next('.workExapmle').offset().top  },800);
 })));
 
 
