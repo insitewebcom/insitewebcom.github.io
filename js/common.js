@@ -36,6 +36,7 @@ $(".headButton").click(function(ev) {
 });
 var adress = 0;
 var sectionID = 0;
+if (wWidth > 500) {
 function showSection() {
             $(sectionID).removeClass("screen");
             $("html, body").animate({ scrollTop: $(sectionID).offset().top }, speed1);
@@ -162,7 +163,50 @@ $("a.navSection").click(function() {
         }, speed6);
     } 
 });
+} else {
+    var sectionID = 0;
+    var bool = 0;
+    var adress = 0;
+    $(".section").css('height', wHeight);
+    $(".section").css("background-color", "rgba(0,0,0,0.8)");
+    $(".section").click($.debounce(250, function() {
+         
+             if (bool == 0) { 
+                $(this).removeClass("screen");
+                sectionID = '#' + $(this).attr("id");
+                $(sectionID).css("background-color", "rgba(0,0,0,0.2)");
+                $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 600); 
+                
+                adress = '#' + $(this).attr('id');
+                 $(".content"+adress).css('background',  '#1B1B1C');
+                  setTimeout(function() {  $(".content"+adress).css('display', 'flex');
 
+              }, 700);
+
+                setTimeout(function() {
+                $(".firstScreen").css("display", "none"); 
+                $(".screen").css("display", "none"); 
+                              if (navigator.userAgent.search("Firefox") >= 0)  {             
+                     $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
+                }
+            }, 620);
+                bool = 1;
+           
+            
+        } else {
+            bool = 0;
+           $(sectionID).addClass('screen');
+                $("html, body").animate({ scrollTop:$(sectionID).offset().top}, 600, function() {
+                $(".firstScreen").css("display", "flex");
+                $(sectionID).css("background-color", "rgba(0,0,0,0.8)");
+                $(".screen").css("display", "flex");
+                $('.content').css("display", "none");
+                $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
+          });
+
+}
+}));
+}
 /*
 $(".workExapmle").click($.debounce(100,(function() {
     $('html').scrollTo($(this).next('.workExapmle'), 300);
