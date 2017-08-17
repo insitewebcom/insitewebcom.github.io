@@ -362,7 +362,7 @@ img
 }
 .containerW {
     width: 50%;
-    margin: 1vh auto;
+    margin: 100px auto;
 }
 
 .person
@@ -460,10 +460,9 @@ h2,
 }
 .contactContent {
     display: flex;
-    height: 100vh;
-    margin: 0 auto;
-    width: 51vw;
-    align-items: center;
+    height: 40vh;
+    margin: 23vh auto 36vh;
+    width: 50vw;
 }
 
 .contactContent h2 {
@@ -472,54 +471,64 @@ h2,
 }
 
 .contact {
+    margin: 0 60px 0 20px;
     width: 20vw;
-    margin-right: 4vw;
-}
-.contact {
-    width: 26vw;
     height: 40vh;
 }
-h1 {    font-size: 4vh;
-}
+
 .contact p {
-    margin: 2px auto;
-    font-size: 2vh;
+    margin: 6px auto;
+    font-size: 15px;
 }
 .adress {
-    margin: 3vh auto;
+    margin: 30px auto;
 }
 input[type="text"] {
-    font-size: 2vh;
-    margin: 2vh 0;
-    height: 4vh;
-    border-radius: 10px;
+    outline: none;
+       font-size: 14px;
+    margin: 13px 0;
+    height: 30px;
+    border-radius: 50px;
     border: none;
-    padding: 4px 8px;
+    padding: 4px 13px;
 }
 .inputContainer {
     display: flex;
-    width: 20vw;
+        width: 100%;
     flex-direction: column;
 }
- button.send {
+button.send {
     background-color: #FFF325;
     border-radius: 50px;
     border: none;
-    padding: 10px 40px;
     outline: none;
+    height: 30px;
+    width: 170px;
+    float: right;
 }
 .big {
-    margin: 2vh 0 4vh;
+    margin: 13px 0 4vh;
     font-size: 2vh;
-
-    height: 12vh;
-    border-radius: 12px;
-    
+    height: 90px;
+    border-radius: 20px;
     font-family: "Roboto", sans-serif;
     resize: none;
-    padding: 8px 4px;
+    padding: 13px 13px;
+    outline: none;
 }
-
+.connect {
+    height: 40vh;
+    width: 26vw;
+    margin-right: 20px;
+    margin-top: -35px;
+}
+.connect h1 {
+    font-size: 23px;
+}
+.connect p{
+    font-size: 15px;
+    margin: 10px auto;
+}
 @media only screen and (max-width: 500px)
 {
 
