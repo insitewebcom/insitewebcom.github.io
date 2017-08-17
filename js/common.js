@@ -175,13 +175,13 @@ $("a.navSection").click(function() {
                 $(this).removeClass("screen");
                 sectionID = '#' + $(this).attr("id");
                 $(sectionID).css("background-color", "rgba(0,0,0,0.2)");
-                $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 600); 
+                $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 500); 
                 
                 adress = '#' + $(this).attr('id');
                  $(".content"+adress).css('background',  '#1B1B1C');
                   setTimeout(function() {  $(".content"+adress).css('display', 'flex');
 
-              }, 700);
+              }, 600);
 
                 setTimeout(function() {
                 $(".firstScreen").css("display", "none"); 
@@ -189,7 +189,7 @@ $("a.navSection").click(function() {
                               if (navigator.userAgent.search("Firefox") >= 0)  {             
                      $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
                 }
-            }, 620);
+            }, 520);
                 bool = 1;
            
             
