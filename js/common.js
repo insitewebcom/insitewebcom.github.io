@@ -167,7 +167,7 @@ $("a.navSection").click(function() {
     var sectionID = 0;
     var bool = 0;
     var adress = 0;
-    $(".section").css('height', wHeight);
+    $(".section").css('height', wHeight*1.1);
     $(".section").css("background-color", "rgba(0,0,0,0.8)");
     $(".section").click($.debounce(250, function() {
          
