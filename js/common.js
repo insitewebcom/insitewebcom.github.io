@@ -17,9 +17,9 @@ else {
     speed1 = 1500,
     speed2 = 1600,
     speed3 = 1700,
-    speed4 = 1200,
-    speed5 = 800,
-    speed6 = 2000, 
+    speed4 = 500,
+    speed5 = 600,
+    speed6 = 1700, 
     speed7 = 800;
 }
 $(".section").hover(function() {
@@ -111,25 +111,29 @@ $(".section").click($.debounce(250, function() {
                          }
       
 }));
+if (wWidth > 500){ 
+var heightScreen = wHeight;
+} else {
+    var heightScreen = 700;
 
-
+}
 $("a.footerSection").click(function() {
     var linkID = $(this).attr("href");
     if (linkID == id) {
         $('html, body').animate({ scrollTop: $(id).offset().top  },speed1); 
     } else {
-        if ($(sectionID).height() == wHeight) {
+        if ($(sectionID).height() == heightScreen) {
             hideSection();
             setTimeout(function() {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, speed1); 
+            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); 
             setTimeout(function() { showSection(); }, speed6);
             }, speed2);
         } else {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - wHeight/4 }, speed1); 
+            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); 
             setTimeout(function() { showSection(); }, speed6);
           }       
       }
