@@ -4,7 +4,7 @@
 
 var wHeight = $(window).height();
 var wWidth = $(window).width();
-if(wWidth >500 ) {
+
 var speed1 = 500,
     speed2 = 600,
     speed3 = 520,
@@ -12,16 +12,8 @@ var speed1 = 500,
     speed5 = 300,
     speed6 = 650, 
     speed7 = 800;
-}
-else {
-    speed1 = 900,
-    speed2 = 1300,
-    speed3 = 1250,
-    speed4 = 1100,
-    speed5 = 700,
-    speed6 = 1800, 
-    speed7 = 800;
-}
+
+if (wWidth > 500) {
 $(".section").hover(function() {
     $(this).css("background-color", "rgba(0,0,0,0.4)");
 }, function() {
@@ -29,21 +21,23 @@ $(".section").hover(function() {
         $(this).css("background-color", "rgba(0,0,0,0.6)");
     }
 });
-
+}
+if (wWidth < 500) {
+    $(".section").height(wHeight*0.5);
+}
 $(".headButton").click(function(ev) {
     ev.preventDefault();
     $("html, body").animate({scrollTop: $("#secondScreen").offset().top}, speed1);
 });
 var adress = 0;
 var sectionID = 0;
-if (wWidth > 500) {
 function showSection() {
             $(sectionID).removeClass("screen");
             $("html, body").animate({ scrollTop: $(sectionID).offset().top }, speed1);
-            if (wWidth > 500) {
-            $(sectionID).animate({height: wHeight}, speed1); }
-            else {
-                            $(sectionID).animate({height: "700px"}, speed1); }
+           
+            $(sectionID).animate({height: wHeight}, speed1); 
+            
+                         
 
             
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
@@ -75,10 +69,10 @@ function hideSection() {
                 $(".screen").css("display", "flex");
                 $('.content').css("display", "none");
                 $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
-                 if (wWidth > 500) {
-             $(sectionID).animate({height: wHeight*0.5}, speed5);}
-            else {
-                            $(sectionID).animate({height: "200px"}, speed5); }
+                 
+             $(sectionID).animate({height: wHeight*0.5}, speed5);
+         
+                            
                 if (wWidth > 500) {
                 $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5); }
                 else {  }
@@ -91,7 +85,7 @@ function hideSection() {
 var id = 0;
 
 $(".section").click($.debounce(250, function() {
-         if (wWidth > 500) {
+         
              if ($(this).height() == wHeight*0.5) { 
             sectionID = this;
             id = '#' + $(this).attr('id');
@@ -100,16 +94,7 @@ $(".section").click($.debounce(250, function() {
         } else {
             sectionID = this;
             hideSection(); 
-          } }
-            else {  if ($(this).height() == 200)  { 
-            sectionID = this;
-            id = '#' + $(this).attr('id');
-            showSection();
-            
-        } else {
-            sectionID = this;
-            hideSection(); 
-          }
+          
                          }
       
 }));
@@ -163,55 +148,7 @@ $("a.navSection").click(function() {
         }, speed6);
     } 
 });
-} else {
-    var sectionID = 0;
-    var bool = 0;
-    var adress = 0;
-    $(".section").css('height', wHeight*1.1);
-    $(".section").css("background-color", "rgba(0,0,0,0.8)");
-    $(".section").click($.debounce(250, function() {
-         
-             if (bool == 0) { 
-                $(this).removeClass("screen");
-                sectionID = '#' + $(this).attr("id");
-                $(sectionID).css("background-color", "rgba(0,0,0,0.2)");
-                $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 500); 
-                
-                adress = '#' + $(this).attr('id');
-                 $(".content"+adress).css('background',  '#1B1B1C');
-                  setTimeout(function() {  $(".content"+adress).css('display', 'flex');
 
-              }, 600);
-
-                setTimeout(function() {
-                $(".firstScreen").css("display", "none"); 
-                $(".screen").css("display", "none"); 
-                              if (navigator.userAgent.search("Firefox") >= 0)  {             
-                     $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
-                }
-            }, 520);
-                bool = 1;
-           
-            
-        } else {
-            bool = 0;
-           $(sectionID).addClass('screen');
-                $("html, body").animate({ scrollTop:$(sectionID).offset().top}, 600, function() {
-                
-                $(sectionID).css("background-color", "rgba(0,0,0,0.8)");
-                setTimeout(function () {
-                   $(".firstScreen").css("display", "flex");
-                $(".screen").css("display", "flex");
-                 $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
-                }, 100);
-                
-                $('.content').css("display", "none");
-                
-          });
-
-}
-}));
-}
 /*
 $(".workExapmle").click($.debounce(100,(function() {
     $('html').scrollTo($(this).next('.workExapmle'), 300);
