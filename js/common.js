@@ -18,7 +18,7 @@ else {
     speed2 = 1300,
     speed3 = 1250,
     speed4 = 1100,
-    speed5 = 500,
+    speed5 = 700,
     speed6 = 1800, 
     speed7 = 800;
 }
@@ -78,8 +78,9 @@ function hideSection() {
              $(sectionID).animate({height: wHeight*0.5}, speed5);}
             else {
                             $(sectionID).animate({height: "200px"}, speed5); }
-                
-                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5);
+                if (wWidth > 500) {
+                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5); }
+                else {  $(this).animate({ scrollTop: $(sectionID).offset().top}, speed5); }
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
                 $("#navHeader").css("display", "none");
                  $(".downButton").css("display", "none"); 
@@ -127,13 +128,18 @@ $("a.footerSection").click(function() {
             setTimeout(function() {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); 
+            if(wWidth > 500) {
+            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); }
+            else {$('html, body').animate({ scrollTop: $(id).offset().top  }, speed1);}
             setTimeout(function() { showSection(); }, speed6);
             }, speed2);
         } else {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); 
+                      if(wWidth > 500) {
+            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); }
+            else {$('html, body').animate({ scrollTop: $(id).offset().top  }, speed1);}
+
             setTimeout(function() { showSection(); }, speed6);
           }       
       }
