@@ -4,7 +4,7 @@
 
 var wHeight = $(window).height();
 var wWidth = $(window).width();
-if(wWidth ) {
+if(wWidth >500 ) {
 var speed1 = 500,
     speed2 = 600,
     speed3 = 520,
@@ -42,7 +42,7 @@ function showSection() {
             if (wWidth > 500) {
             $(sectionID).animate({height: wHeight}, speed1); }
             else {
-                            $(sectionID).animate({height: "750px"}, speed1); }
+                            $(sectionID).animate({height: "700px"}, speed1); }
 
             
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
