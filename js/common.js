@@ -14,12 +14,12 @@ var speed1 = 500,
     speed7 = 800;
 }
 else {
-    speed1 = 1000,
-    speed2 = 1200,
-    speed3 = 1040,
-    speed4 = 500,
-    speed5 = 600,
-    speed6 = 1300, 
+    speed1 = 750,
+    speed2 = 900,
+    speed3 = 780,
+    speed4 = 600,
+    speed5 = 450,
+    speed6 = 975, 
     speed7 = 800;
 }
 $(".section").hover(function() {
