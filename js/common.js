@@ -14,7 +14,7 @@ var speed1 = 500,
     speed7 = 800;
 }
 else {
-    speed1 = 1200,
+    speed1 = 900,
     speed2 = 1300,
     speed3 = 1250,
     speed4 = 1100,
