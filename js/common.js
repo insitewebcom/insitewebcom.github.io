@@ -197,11 +197,16 @@ $("a.navSection").click(function() {
             bool = 0;
            $(sectionID).addClass('screen');
                 $("html, body").animate({ scrollTop:$(sectionID).offset().top}, 600, function() {
-                $(".firstScreen").css("display", "flex");
+                
                 $(sectionID).css("background-color", "rgba(0,0,0,0.8)");
+                setTimeout(function () {
+                   $(".firstScreen").css("display", "flex");
                 $(".screen").css("display", "flex");
+                 $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
+                }, 100);
+                
                 $('.content').css("display", "none");
-                $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
+                
           });
 
 }
