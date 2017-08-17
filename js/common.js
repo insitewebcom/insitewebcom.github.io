@@ -80,7 +80,7 @@ function hideSection() {
                             $(sectionID).animate({height: "200px"}, speed5); }
                 if (wWidth > 500) {
                 $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5); }
-                else {  $(this).animate({ scrollTop: $(sectionID).offset().top}, speed5); }
+                else {  }
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
                 $("#navHeader").css("display", "none");
                  $(".downButton").css("display", "none"); 
@@ -130,7 +130,7 @@ $("a.footerSection").click(function() {
             id = linkID;
             if(wWidth > 500) {
             $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); }
-            else {$('html, body').animate({ scrollTop: $(id).offset().top  }, speed1);}
+            else {}
             setTimeout(function() { showSection(); }, speed6);
             }, speed2);
         } else {
