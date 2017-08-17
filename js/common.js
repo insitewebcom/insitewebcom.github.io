@@ -176,22 +176,20 @@ $("a.navSection").click(function() {
                 sectionID = '#' + $(this).attr("id");
                 $(sectionID).css("background-color", "rgba(0,0,0,0.2)");
                 $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 600); 
-                 
-
+                
                 adress = '#' + $(this).attr('id');
                  $(".content"+adress).css('background',  '#1B1B1C');
-                  setTimeout(function() {  $(".content"+adress).show('500');
- $(".firstScreen").hide('500');
-                $(".screen").hide('500');
-                $('footer').hide('500');
+                  setTimeout(function() {  $(".content"+adress).css('display', 'flex');
+
               }, 700);
 
                 setTimeout(function() {
-               
+                $(".firstScreen").css("display", "none"); 
+                $(".screen").css("display", "none"); 
                               if (navigator.userAgent.search("Firefox") >= 0)  {             
                      $('html, body').animate({ scrollTop: $(sectionID).offset().top }, 0); 
                 }
-            }, 700);
+            }, 620);
                 bool = 1;
            
             
