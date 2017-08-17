@@ -5,6 +5,7 @@
 var wHeight = $(window).height();
 var wWidth = $(window).width();
 
+if(wWidth >500 ) {
 var speed1 = 500,
     speed2 = 600,
     speed3 = 520,
@@ -12,7 +13,16 @@ var speed1 = 500,
     speed5 = 300,
     speed6 = 650, 
     speed7 = 800;
-
+}
+else {
+    speed1 = 900,
+    speed2 = 1300,
+    speed3 = 1250,
+    speed4 = 1100,
+    speed5 = 700,
+    speed6 = 1800, 
+    speed7 = 800;
+}
 if (wWidth > 500) {
 $(".section").hover(function() {
     $(this).css("background-color", "rgba(0,0,0,0.4)");
@@ -34,9 +44,11 @@ var sectionID = 0;
 function showSection() {
             $(sectionID).removeClass("screen");
             $("html, body").animate({ scrollTop: $(sectionID).offset().top }, speed1);
-           
+           if(wWidth >500) {
             $(sectionID).animate({height: wHeight}, speed1); 
-            
+            } else {
+                $(sectionID).animate({height: wHeight*1.15}, speed1); 
+            }
                          
 
             
@@ -73,9 +85,9 @@ function hideSection() {
              $(sectionID).animate({height: wHeight*0.5}, speed5);
          
                             
-                if (wWidth > 500) {
-                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5); }
-                else {  }
+               
+                $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5); 
+             
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
                 $("#navHeader").css("display", "none");
                  $(".downButton").css("display", "none"); 
@@ -98,10 +110,10 @@ $(".section").click($.debounce(250, function() {
                          }
       
 }));
-if (wWidth > 500){ 
-var heightScreen = wHeight;
+if (wWidth < 500) {
+var heightScreen = wHeight*1.15;
 } else {
-    var heightScreen = 700;
+    var heightScreen = wHeight;
 
 }
 $("a.footerSection").click(function() {
@@ -114,17 +126,17 @@ $("a.footerSection").click(function() {
             setTimeout(function() {
             sectionID = linkID;
             id = linkID;
-            if(wWidth > 500) {
-            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); }
-            else {}
+           
+            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); 
+          
             setTimeout(function() { showSection(); }, speed6);
             }, speed2);
         } else {
             sectionID = linkID;
             id = linkID;
-                      if(wWidth > 500) {
-            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); }
-            else {$('html, body').animate({ scrollTop: $(id).offset().top  }, speed1);}
+                      
+            $('html, body').animate({ scrollTop: $(id).offset().top}, speed1); 
+           
 
             setTimeout(function() { showSection(); }, speed6);
           }       
