@@ -572,32 +572,27 @@ input[type="text"] {
         margin: 5vh 0vh;
     }
     .mainImg
-    {
+    {    height: 400px;
         margin: 1vh auto;
     }
-    .information p
-    {
-        width: 80vw;
-        margin: 1vh auto;
-    }
+    .information p {
+    width: 80%;
+    margin: 10px auto;
+}
     .workExapmle
     {
         height: auto;
         padding-top: 4vh;
     }
-    .firstScreen
-    {
-        height: 100vh;
-
-        -webkit-background-size: cover;
-                background-size: cover;
-    }
-    .first
-    {
-        font-size: 14vh;
-
-        letter-spacing: 2vw;
-    }
+    .firstScreen {
+    height: 640px;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.first {
+    font-size: 6rem;
+    letter-spacing: 0.3rem;
+}
     .second
     {
         font-size: 2.5rem;
@@ -613,13 +608,14 @@ input[type="text"] {
     {
         display: none;
     }
-    .section
-    {
-        outline: none;
--webkit-tap-highlight-color: rgba(0,0,0,0);
--webkit-tap-highlight-color: transparent;
-        background-size: center;
-    }
+    
+    .section {
+    outline: none;
+    height: 200px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    background-size: center;
+}
     .downButton
     {
         display: none !important;

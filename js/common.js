@@ -4,7 +4,7 @@
 
 var wHeight = $(window).height();
 var wWidth = $(window).width();
-if(wWidth > 500) {
+if(wWidth ) {
 var speed1 = 500,
     speed2 = 600,
     speed3 = 520,
@@ -42,7 +42,7 @@ function showSection() {
             if (wWidth > 500) {
             $(sectionID).animate({height: wHeight}, speed1); }
             else {
-                            $(sectionID).animate({height: wHeight*0.9}, speed1); }
+                            $(sectionID).animate({height: "750px"}, speed1); }
 
             
             $(sectionID).css("background-color", "rgba(0,0,0,0.4)");
@@ -74,8 +74,11 @@ function hideSection() {
                 $(".screen").css("display", "flex");
                 $('.content').css("display", "none");
                 $(this).animate({ scrollTop: $(sectionID).offset().top }, 0);
+                 if (wWidth > 500) {
+             $(sectionID).animate({height: wHeight*0.5}, speed5);}
+            else {
+                            $(sectionID).animate({height: "200px"}, speed5); }
                 
-                $(sectionID).animate({height: wHeight*0.5}, speed5);
                 $(this).animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, speed5);
                 $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
                 $("#navHeader").css("display", "none");
@@ -86,7 +89,17 @@ function hideSection() {
 var id = 0;
 
 $(".section").click($.debounce(250, function() {
-        if (($(this).height() >= wHeight*0.5) && ($(this).height() < wHeight*0.8)) { 
+         if (wWidth > 500) {
+             if ($(this).height() == wHeight*0.5) { 
+            sectionID = this;
+            id = '#' + $(this).attr('id');
+            showSection();
+            
+        } else {
+            sectionID = this;
+            hideSection(); 
+          } }
+            else {  if ($(this).height() == 200)  { 
             sectionID = this;
             id = '#' + $(this).attr('id');
             showSection();
@@ -95,6 +108,8 @@ $(".section").click($.debounce(250, function() {
             sectionID = this;
             hideSection(); 
           }
+                         }
+      
 }));
 
 
