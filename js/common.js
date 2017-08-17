@@ -18,7 +18,7 @@ else {
     speed2 = 900,
     speed3 = 780,
     speed4 = 600,
-    speed5 = 450,
+    speed5 = 500,
     speed6 = 975, 
     speed7 = 800;
 }
