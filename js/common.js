@@ -161,11 +161,9 @@ $(".section").click($.debounce(440, function() {
         }
 }));
 
-if (wWidth < 500) {
-    var heightScreen = wHeight*1.15;
-} else {
+
     var heightScreen = wHeight;
-}
+
 
 $("a.footerSection").click(function() {
     var linkID = $(this).attr("href");
@@ -253,3 +251,18 @@ $(".workExapmle").click($.debounce(100,(function() {
 })));
 }
 
+$(".send").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            alert("Thank you!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
