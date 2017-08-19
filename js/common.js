@@ -75,15 +75,30 @@ function show() {
     adress = $(this).attr('id');
     $(sectionID).css("background-color", "rgba(0,0,0,0.2)");
     $(".content"+adress).css('background',  '#1B1B1C');
-    $('html, body').animate({ scrollTop: $(sectionID).offset().top  }, 600);
-    $(sectionID).animate({height: wHeight}, 600, function() {
+    $('html, body').animate({ scrollTop: $(sectionID).offset().top  }, 500);
+    $(sectionID).animate({height: wHeight}, 500, function() {
             $(".content"+adress).css('display', 'flex');
             $(".firstScreen").css("display", "none"); 
             $(".screen").css("display", "none"); 
             $('html, body').scrollTop(0);
         });
-        
+}
 
+function hide(speedTopScroll) {
+    $(sectionID).addClass('screen');
+    $('html, body').animate({ scrollTop: $(sectionID).offset().top }, speedTopScroll, function() {
+        $('.firstScreen').css('display', 'flex');
+        $('.screen').css('display', 'flex');
+        $('.content').css('display', 'none');
+        $('html, body').scrollTop($(sectionID).offset().top);
+        setTimeout(function() {
+            $(sectionID).animate({height: wHeight*0.5}, 300);
+            $('html, body').animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, 300); 
+            $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
+            $("#navHeader").css("display", "none");
+            $(".downButton").css("display", "none"); 
+        }, 10);
+    });
 }
 
 
@@ -135,14 +150,14 @@ function hideSection() {
 
 var id = 0;
 
-$(".section").click($.debounce(250, function() {
+$(".section").click($.debounce(440, function() {
          if ($(this).height() == wHeight*0.5) { 
             sectionID = this;
             id = '#' + $(this).attr('id');
             show();
         } else {
             sectionID = this;
-            hideSection(); 
+            hide(300); 
         }
 }));
 
@@ -154,17 +169,20 @@ if (wWidth < 500) {
 
 $("a.footerSection").click(function() {
     var linkID = $(this).attr("href");
+    var speedTopScroll = ( id == '#thirdScreen') ? 2000 : 800;
+    var bool = ( speedTopScroll == 2000 ) ? 2400 : 1200;
     if (linkID == id) {
-        $('html, body').animate({ scrollTop: $(id).offset().top  },speed1); 
+        $('html, body').animate({ scrollTop: $(id).offset().top }, speedTopScroll); 
     } else {
         if ($(sectionID).height() == heightScreen) {
-            hideSection();
+            hide(speedTopScroll);
             setTimeout(function() {
             sectionID = linkID;
             id = linkID;
-            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, speed1); 
-            setTimeout(function() { showSection(); }, speed6);
-            }, speed2);
+            $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, 500);
+            setTimeout( function() {            show(); }, 1100);
+          
+            }, bool);
         } else {
             sectionID = linkID;
             id = linkID;
