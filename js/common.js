@@ -12,6 +12,7 @@ $('.flip-container').click( function(e) {
     }
 });
 
+
 /*
 $('.flip-container').on('touchstart', function(e) {
     $('.flip-container').addClass('hover');
@@ -76,7 +77,11 @@ function show() {
     $(sectionID).css("background-color", "rgba(0,0,0,0.2)");
     $(".content"+adress).css('background',  '#1B1B1C');
     $('html, body').animate({ scrollTop: $(sectionID).offset().top  }, 500);
-    $(sectionID).animate({height: wHeight}, 500, function() {
+    sectionID.animate([
+    {
+        height: '100vh'
+    }], 500);
+    setTimeout(function() {   
             $(".content"+adress).css('display', 'flex');
             $(".firstScreen").css("display", "none"); 
             $(".screen").css("display", "none"); 
