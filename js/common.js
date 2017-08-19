@@ -97,7 +97,7 @@ function hide(speedTopScroll) {
             $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
             $("#navHeader").css("display", "none");
             $(".downButton").css("display", "none"); 
-        }, 10);
+        }, 110);
     });
 }
 
