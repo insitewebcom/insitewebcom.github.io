@@ -602,7 +602,7 @@ button.send {
     transform: translateZ(90px) translateX(-53px) translateY(-371px) rotateZ(10deg) rotateY(-36deg);
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
         transition: all 1s ease;
-        margin-bottom: -350px;
+        margin-bottom: -50vh;
 }
 .flip-container .land1 {
     transform: translateZ(40px) translateX(21px) translateY(20px) rotateZ(10deg) rotateY(-36deg);
@@ -617,7 +617,7 @@ button.send {
     transform: translateZ(90px) translateX(-53px) translateY(-371px) rotateZ(10deg) rotateY(-36deg);
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
         transition: all 1s ease;
-        margin-bottom: -350px;
+        margin-bottom: -50vh;
 }
   .flip-container.hover .mainImg {
      transform: translateZ(0) translateX(0) translateY(0) rotateZ(0deg) rotateY(0deg);
