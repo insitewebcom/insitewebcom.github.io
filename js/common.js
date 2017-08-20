@@ -81,7 +81,8 @@ function show() {
             $(".content"+adress).css('display', 'flex');
             $(".firstScreen").css("display", "none"); 
             $(".screen").css("display", "none"); 
-           $('.close').css('display', 'block');            
+        
+              
 
             $('html, body').scrollTop(0);
         });
@@ -100,13 +101,13 @@ function hide(speedTopScroll) {
             $('html, body').animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, 300); 
             $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
             $("#navHeader").css("display", "none");
-             $('.close').css('display', 'none');            
+                       
 
-
+            $('.close').css('display', 'none');
 
             $(".downButton").css("display", "none"); 
 
-        }, 110);
+        }, 110);  
     });
 }
 
