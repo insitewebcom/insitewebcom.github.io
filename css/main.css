@@ -620,7 +620,7 @@ border: 4px solid transparent;
 
 
 
-}
+
 .close:before, .close:after {
     position: absolute;
     content: ' ';
