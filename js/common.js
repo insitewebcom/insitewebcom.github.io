@@ -76,11 +76,12 @@ function show() {
     adress = $(this).attr('id');
     $(sectionID).css("background-color", "rgba(0,0,0,0.2)");
     $(".content"+adress).css('background',  '#1B1B1C');
-    $('html, body').animate({ scrollTop: $(sectionID).offset().top  }, 500);
-    $(sectionID).animate({height: wHeight}, 500, function() {
+    $('html, body').animate({ scrollTop: $(sectionID).offset().top  }, 400);
+    $(sectionID).animate({height: wHeight}, 400, function() {
             $(".content"+adress).css('display', 'flex');
             $(".firstScreen").css("display", "none"); 
             $(".screen").css("display", "none"); 
+            $('.close').css('display', 'block');
             $('html, body').scrollTop(0);
         });
 }
@@ -97,10 +98,16 @@ function hide(speedTopScroll) {
             $('html, body').animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, 300); 
             $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
             $("#navHeader").css("display", "none");
+            $('.close').css('display', 'none');
+
             $(".downButton").css("display", "none"); 
         }, 110);
     });
 }
+
+$('.close').click(function() {
+    hide();
+})
 
 
 function showSection() {
@@ -179,7 +186,7 @@ $("a.footerSection").click(function() {
             sectionID = linkID;
             id = linkID;
             $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, 500);
-            setTimeout( function() {            show(); }, 1100);
+            setTimeout( function() {            show(); }, 900);
           
             }, bool);
         } else {
