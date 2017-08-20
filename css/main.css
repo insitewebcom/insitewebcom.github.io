@@ -318,7 +318,46 @@ padding: 8px;
 
     background-color: #101010 !important;
 }
+.container {
+    display: grid;
+    /* margin-top: 102px; */
+    width: 80%;
+    align-items: center;
+    justify-items: center;
+    height: 150vh;
+    margin: 4% auto;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% auto;
+    grid-column-gap: 3%;
+}
+.container img {
+    height: 42vh;
+    margin: 0;
+    justify-self: center; 
+    align-self: center;
+    border-radius: 0.5vh;
+}
+.howWork {
+    list-style-type: none;
+    /* justify-self: center; */
+    width: 85%;
+    align-self: center;
+}
+li.work.h {
+    font-size: 3.9vw;
+    margin-bottom: 5%;
+    margin-left: 0;
+    line-height: 6vh;
+}
+li.work {
+    font-size: 1.3vw;
+    margin: 1.5% 0;
+    margin-left: 1%;
+}
 
+.hiddenImg {
+    display: none;
+}
 
 .workExapmle h2 {
     margin: 6vh auto 3vh;
@@ -1031,7 +1070,39 @@ button.send {
     margin: 30px;
 }
 
-
+.container {
+    width: 75%;
+    height: 275vh;
+    margin: 20% auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 16% 16% 16% 16% 16% 16% 16%;
+    grid-row-gap: 2%;
+}
+.howWork {
+    
+   
+    width: 100%;
+    
+}
+li.work.h {
+    font-size: 6vh;
+    margin-bottom: 5%;
+   
+}
+li.work {
+    font-size: 5vh;
+}
+.container img {
+    height: 50vw;
+    margin: 0;
+    
+}
+.hiddenImg {
+    display: block;
+}
+.notHidden {
+    display: none;
+}
 }
 
 @media only screen and (max-width: 1024px) {
