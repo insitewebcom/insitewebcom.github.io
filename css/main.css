@@ -19,7 +19,7 @@ a
 }
 body
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'MuseoRegular';
 
     color: #fff;
 }
@@ -58,6 +58,20 @@ img
     src: url(../fonts/Nickainley.otf) format('opentype');
 }
 
+@font-face {
+    font-family: 'MuseoBold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url(../fonts/MuseoSansBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'MuseoRegular';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url(../fonts/MuseoSansRegular.ttf) format('truetype');
+}
 #navHeader
 {
     display: none;
@@ -136,7 +150,7 @@ img
 
 #name
 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand';
 
     margin-top: 15.62rem;
 
@@ -162,7 +176,7 @@ img
 
 .description
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'MuseoRegular';
     font-size: 1.2rem;
 
     padding-top: 1.2rem;
@@ -215,7 +229,7 @@ img
 
 .section
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'MuseoBold';
     font-size: 7.5rem;
 
     display: flex;
@@ -260,7 +274,7 @@ img
 
 
 #thirdScreen
-{
+{   
     background-image: url(../img/img4.jpg);
 }
 
@@ -447,7 +461,7 @@ button.send {
     font-size: 15px;
     height: 90px;
     border-radius: 20px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Museo";
     resize: none;
     padding: 13px 13px;
     outline: none;
@@ -571,11 +585,12 @@ button.send {
 
 .close {
     display: none;
+
     cursor: pointer;
 position: fixed;
 z-index: 10;
-right: 10%;
-top: 10%;
+right: 5%;
+top: 5%;
 width: 60px;
 height: 60px;
 opacity: 0.85;
