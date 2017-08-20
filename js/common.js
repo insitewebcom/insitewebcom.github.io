@@ -81,7 +81,7 @@ function show() {
             $(".content"+adress).css('display', 'flex');
             $(".firstScreen").css("display", "none"); 
             $(".screen").css("display", "none"); 
-        
+             $(".downButton").css("display", "block");
               
 
             $('html, body').scrollTop(0);
@@ -274,7 +274,7 @@ if ($(this).attr('id') == 'workExapmle6')
 
 if (wWidth > 500) {
 $(".downButton").click(function() {
-    $('html, body').scrollTo('#workExapmle1', 700);
+    $('html, body').scrollTo('.content' + adress, 700);
 });
 
 $(".workExapmle").click($.debounce(100,(function() {
