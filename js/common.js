@@ -116,6 +116,9 @@ function show() {
             $('.right').animated('fadeInRight');
             $('.person:nth-child(even)').animated('fadeInLeft');
             $('.person:nth-child(odd)').animated('fadeInRight');
+            $('.workExapmle h2').animated('fadeInDown');
+            $('.information p').animated('fadeInRight');
+            $('.flip-container').animated('fadeInLeft');
 
         });
 }
@@ -139,6 +142,9 @@ function hide(speedTopScroll) {$('.close').css('display', 'none');
            $('.right').removeClass('animated').removeClass('fadeInRight').css('opacity', '0');
              $('.person:nth-child(even)').removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
              $('.person:nth-child(odd)').removeClass('animated').removeClass('fadeInRight').css('opacity', '0');
+             $('.information p').removeClass('animated').removeClass('fadeInRight').css('opacity', '0');
+             $('.flip-container').removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
+            $('.workExapmle h2').removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
             $(".downButton").css("display", "none"); 
 
         }, 110);  

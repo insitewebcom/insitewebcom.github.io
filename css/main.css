@@ -697,6 +697,9 @@ transform: rotate(-45deg);
         overflow: hidden;
 
 }
+.animated {
+    animation-delay: 0.4s;
+}
 a.callback {
     /* width: 100%; */
     display: block;
