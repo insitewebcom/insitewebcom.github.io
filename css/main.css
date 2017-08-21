@@ -347,6 +347,7 @@ padding: 8px;
     align-self: center;
 }
 li.work.h {
+    letter-spacing: normal;
     font-size: 3.9vw;
     margin-bottom: 5%;
     margin-left: 0;
