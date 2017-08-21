@@ -348,7 +348,7 @@ padding: 8px;
 }
 li.work.h {
     letter-spacing: normal;
-    font-size: 3.9vw;
+    font-size: 3vw;
     margin-bottom: 5%;
     margin-left: 0;
     line-height: 6vh;
@@ -369,7 +369,7 @@ li.work {
 
     text-align: center;
 }
-.workExapmle img {
+.person img {
     height: 150px;
 }
 .logo 
@@ -416,7 +416,9 @@ li.work {
     justify-content: center;
     
 }
-
+#workExapmle1 h2 {
+    width: 50%; 
+}
 
 
 .information {
@@ -454,7 +456,7 @@ li.work {
 
 .text h3
 {
-    font-size: 3vw;
+    font-size: 2.3vw;
 
     padding-bottom: 1rem;
 }
@@ -688,7 +690,11 @@ transform: rotate(-45deg);
     animation: fadeInDownBig 1s ease ;
 }
 .left, .right {
-    animation-delay: 0.5s;
+    animation-delay: 0.3s;
+}
+.person {
+        animation-delay: 0.3s;
+
 }
 a.callback {
     /* width: 100%; */
@@ -1177,7 +1183,7 @@ li.work.h {
     margin: 0 2vw;
 }
 li.work.h.first{
-    margin-top: 4vh;
+    margin-top: 5vh;
 }
 }
 @media only screen and (max-width: 1024px) {

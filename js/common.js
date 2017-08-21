@@ -114,6 +114,9 @@ function show() {
             $('html, body').scrollTop(0);
             $('.left').animated('fadeInLeft');
             $('.right').animated('fadeInRight');
+            $('.person:nth-child(even)').animated('fadeInLeft');
+            $('.person:nth-child(odd)').animated('fadeInRight');
+
         });
 }
 
@@ -132,9 +135,10 @@ function hide(speedTopScroll) {$('.close').css('display', 'none');
             $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
             $("#navHeader").css("display", "none");
                        
-            $("#f").removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
-           
-            
+            $('.left').removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
+           $('.right').removeClass('animated').removeClass('fadeInRight').css('opacity', '0');
+             $('.person:nth-child(even)').removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
+             $('.person:nth-child(odd)').removeClass('animated').removeClass('fadeInRight').css('opacity', '0');
             $(".downButton").css("display", "none"); 
 
         }, 110);  
