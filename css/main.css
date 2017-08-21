@@ -329,6 +329,7 @@ padding: 8px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33% 33% auto;
     grid-column-gap: 3%;
+    overflow: hidden;
 }
 .container img {
     height: 42vh;
@@ -336,8 +337,10 @@ padding: 8px;
     justify-self: center; 
     align-self: center;
     border-radius: 0.5vh;
+   
 }
 .howWork {
+  
     list-style-type: none;
     /* justify-self: center; */
     width: 85%;
@@ -673,7 +676,15 @@ transform: rotate(45deg);
 .close:after {
 transform: rotate(-45deg);
 }
-
+#name {
+    
+    -webkit-animation: fadeInDownBig 1s ease ;
+    -o-animation: fadeIn 1s ease 0.5s;
+    animation: fadeInDownBig 1s ease ;
+}
+.left, .right {
+    animation-delay: 0.5s;
+}
 @media only screen and (max-width: 500px)
 {
 
@@ -691,8 +702,12 @@ border: 4px solid transparent;
 
 
 }
-
-
+.left, .right {
+    animation-delay: 0.5s;
+}
+.container {
+    overflow: hidden;
+}
 
 
 .close:before, .close:after {
@@ -1071,12 +1086,12 @@ button.send {
 }
 
 .container {
-    width: 75%;
-    height: 275vh;
-    margin: 20% auto;
+    width: 80%;
+    height: 300vh;
+    margin: 25% auto;
     grid-template-columns: 100%;
-    grid-template-rows: 16% 16% 16% 16% 16% 16% 16%;
-    grid-row-gap: 2%;
+    grid-template-rows: 15% 15% 15% 15% 15% 15% 15%;
+    grid-row-gap: 2.5%;
 }
 .howWork {
     
@@ -1085,12 +1100,12 @@ button.send {
     
 }
 li.work.h {
-    font-size: 6vh;
+    font-size: 11vw;
     margin-bottom: 5%;
-   
 }
+
 li.work {
-    font-size: 5vh;
+    font-size: 5vw;
 }
 .container img {
     height: 50vw;
