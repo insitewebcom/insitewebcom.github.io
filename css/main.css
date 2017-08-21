@@ -713,10 +713,8 @@ a.callback {
     font-family: "MuseoBold";
     text-transform: uppercase;
 }
-
-.fadeIn {
-    animation-delay: 0.5s;
-    animation-duration: 6s;
+.information p {
+    overflow: hidden;
 }
 @media only screen and (max-width: 500px)
 {
