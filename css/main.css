@@ -683,12 +683,7 @@ transform: rotate(45deg);
 .close:after {
 transform: rotate(-45deg);
 }
-#name {
-    
-    -webkit-animation: fadeInDownBig 1s ease ;
-    -o-animation: fadeIn 1s ease 0.5s;
-    animation: fadeInDownBig 1s ease ;
-}
+
 .left, .right {
     animation-delay: 0.3s;
 }
@@ -717,6 +712,11 @@ a.callback {
     font-size: 0.8vw;
     font-family: "MuseoBold";
     text-transform: uppercase;
+}
+
+.fadeIn {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
 }
 @media only screen and (max-width: 500px)
 {
