@@ -694,6 +694,7 @@ transform: rotate(-45deg);
 }
 .person {
         animation-delay: 0.3s;
+        overflow: hidden;
 
 }
 a.callback {
