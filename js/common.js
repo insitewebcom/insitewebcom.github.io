@@ -117,7 +117,7 @@ function show() {
         });
 }
 
-function hide(speedTopScroll) {
+function hide(speedTopScroll) {$('.close').css('display', 'none');
     $(sectionID).addClass('screen');
     $('html, body').animate({ scrollTop: $(sectionID).offset().top }, speedTopScroll, function() {
         $('.firstScreen').css('display', 'flex');
@@ -134,7 +134,7 @@ function hide(speedTopScroll) {
                        
             $("#f").removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
            
-            $('.close').css('display', 'none');
+            
             $(".downButton").css("display", "none"); 
 
         }, 110);  
@@ -146,7 +146,7 @@ function hide(speedTopScroll) {
 $(window).scroll(function(){
     var top = $(window).scrollTop();
  
-    if($('.section' + adress).height() == wHeight) {
+    if($('.section' + adress).height() == wHeight && !($(sectionID).hasClass('screen'))) {
       if (top > wHeight) {
 
         $('.close').fadeIn('0');
