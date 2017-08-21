@@ -1162,13 +1162,13 @@ a.callback {
 li.work.h {
     font-size: 10vw;
     margin-bottom: 5%;
-    margin-top: 15%;
+   
 }
 .footerSection {
     font-size: 4.5vw;
     margin: 0 2vw;
 }
-li.work.h:first {
+li.work.h.first {
    
     margin-top: 15%;
 }
