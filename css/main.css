@@ -1107,7 +1107,7 @@ button.send {
     margin: 22% auto 0;
     grid-template-columns: 100%;
     grid-template-rows: 15.5% 15% 15% 15% 15% 15% 15%;
-    grid-row-gap: 2.4%;
+    grid-row-gap: 50px;
 }
 .howWork {
     
@@ -1163,6 +1163,9 @@ li.work.h {
     font-size: 10vw;
     margin-bottom: 5%;
    
+}
+.container {
+    grid-row-gap: 40px;
 }
 .footerSection {
     font-size: 4.5vw;
