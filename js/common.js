@@ -122,18 +122,19 @@ function hide(speedTopScroll) {
     $('html, body').animate({ scrollTop: $(sectionID).offset().top }, speedTopScroll, function() {
         $('.firstScreen').css('display', 'flex');
         $('.screen').css('display', 'flex');
-        $('.content').css('display', 'none'); 
+       $('.content').css('display', 'none');
         $('html, body').scrollTop($(sectionID).offset().top);
+        
         setTimeout(function() {
-
+                
             $(sectionID).animate({height: wHeight*0.5}, 300);
             $('html, body').animate({ scrollTop: $(sectionID).offset().top - wHeight/4}, 300); 
             $(sectionID).css("background-color", "rgba(0,0,0,0.6)");
             $("#navHeader").css("display", "none");
                        
             $("#f").removeClass('animated').removeClass('fadeInLeft').css('opacity', '0');
+           
             $('.close').css('display', 'none');
-
             $(".downButton").css("display", "none"); 
 
         }, 110);  
@@ -145,7 +146,7 @@ function hide(speedTopScroll) {
 $(window).scroll(function(){
     var top = $(window).scrollTop();
  
-    if($(sectionID).height() == wHeight) {
+    if($('.section' + adress).height() == wHeight) {
       if (top > wHeight) {
 
         $('.close').fadeIn('0');
@@ -159,8 +160,9 @@ $(window).scroll(function(){
     
 
 $('.close').click(function() {
-   
+    
     hide(700);
+
 })
 
 
@@ -236,11 +238,12 @@ $("a.footerSection").click(function() {
     } else {
         if ($(sectionID).height() == heightScreen) {
             hide(speedTopScroll);
+            $('.close').css('display', 'none');
             setTimeout(function() {
             sectionID = linkID;
             id = linkID;
             $('html, body').animate({ scrollTop: $(id).offset().top - heightScreen/4 }, 500);
-            setTimeout( function() {            show(); }, 900);
+            setTimeout( function() {            show(); }, 1200);
           
             }, bool);
         } else {
