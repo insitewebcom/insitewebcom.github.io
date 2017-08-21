@@ -1088,10 +1088,10 @@ button.send {
 .container {
     width: 80%;
     height: 300vh;
-    margin: 25% auto;
+    margin: 22% auto;
     grid-template-columns: 100%;
-    grid-template-rows: 15% 15% 15% 15% 15% 15% 15%;
-    grid-row-gap: 2.5%;
+    grid-template-rows: 15.5% 15% 15% 15% 15% 15% 15%;
+    grid-row-gap: 2.4%;
 }
 .howWork {
     
