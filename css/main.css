@@ -699,7 +699,9 @@ transform: rotate(-45deg);
 }
 .animated {
     animation-delay: 0.4s;
+    
 }
+
 a.callback {
     /* width: 100%; */
     display: block;
@@ -740,7 +742,9 @@ border: 4px solid transparent;
     overflow: hidden;
 }
 
-
+.animated {
+    overflow: hidden;
+}
 .close:before, .close:after {
     position: absolute;
     content: ' ';
