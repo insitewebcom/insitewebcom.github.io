@@ -713,9 +713,7 @@ a.callback {
     font-family: "MuseoBold";
     text-transform: uppercase;
 }
-.information p {
-    overflow: hidden;
-}
+
 @media only screen and (max-width: 500px)
 {
 
