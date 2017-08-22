@@ -326,7 +326,7 @@ $(".workExapmle").click($.debounce(100,(function() {
 })));
 }
 
-$(".send").submit(function() { //Change
+$(".inputContainer").submit(function() { //Change
         var th = $(this);
         $.ajax({
             type: "POST",
