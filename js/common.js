@@ -20,7 +20,21 @@ $('.flip-container').click( function(e) {
     }
 });
 $(document).ready(function() {
-    
+$("#inputContainer").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "../mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            alert("Thank you!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
 });
 
 /*
@@ -324,21 +338,4 @@ $(".downButton").click(function() {
 $(".workExapmle").click($.debounce(100,(function() {
     $('html, body').animate({ scrollTop: $(this).next('.workExapmle').offset().top  }, 800);
 })));
-}
-$(document).ready(function() {
-$("#inputContainer").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "../mail.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            alert("Thank you!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
-    });
 }
