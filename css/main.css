@@ -291,7 +291,7 @@ padding: 8px;
 
 #secondScreen .name
 {
-    letter-spacing: .6rem;
+    letter-spacing: normal;
 }
 
 #thirdScreen .name
