@@ -325,7 +325,7 @@ $(".workExapmle").click($.debounce(100,(function() {
     $('html, body').animate({ scrollTop: $(this).next('.workExapmle').offset().top  }, 800);
 })));
 }
-
+$(document).ready(function() {
 $("#inputContainer").submit(function() { //Change
         var th = $(this);
         $.ajax({
@@ -341,3 +341,4 @@ $("#inputContainer").submit(function() { //Change
         });
         return false;
     });
+}
