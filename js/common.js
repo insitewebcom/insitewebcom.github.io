@@ -239,7 +239,7 @@ function hideSection() {
 var id = 0;
 
 $(".section").click($.debounce(440, function() {
-         if ($(this).height() == wHeight*0.5) { 
+         if ($(this).height() < wHeight) { 
             sectionID = this;
             id = '#' + $(this).attr('id');
             show();
